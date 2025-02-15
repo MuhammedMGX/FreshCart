@@ -87,7 +87,7 @@ export default function Navbar() {
 
                 {Token ? 
                 <div>
-                    <Link to="cart" className="block text-gray-900 mt-1 rounded-sm hover:bg-gray-100 md:hover:bg-transparent p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 focus:text-blue-900 transition"><i className="fa-solid fa-cart-shopping relative dark:text-gray-300">{numOfCartItems != 0 ? <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-5 -end-5 dark:border-gray-900">{numOfCartItems}</div> : null}</i></Link>
+                    <Link to="cart" className="block text-gray-900 mt-1 rounded-sm hover:bg-gray-100 md:hover:bg-transparent p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 focus:text-blue-900 transition"><i className="fa-solid fa-cart-shopping relative dark:text-gray-300">{numOfCartItems != 0 ? <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-black text-white rounded-full -top-5 -end-5 dark:bg-white dark:text-black">{numOfCartItems}</div> : null}</i></Link>
                 </div>:null}
 
                 {Token ? (
