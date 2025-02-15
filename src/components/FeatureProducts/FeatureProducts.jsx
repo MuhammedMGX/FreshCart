@@ -29,11 +29,7 @@ export default function FeatureProducts() {
     queryFn: getProducts
   })
 
-  useEffect(() => {
-    if (data?.data?.data) {
-      setWishlistId(data.data.data.map(item => item._id));
-    }
-  }, [data])
+  
 
   async function addToWishlists(productId) {
     await dispatch(addWishlist(productId));
@@ -45,6 +41,12 @@ export default function FeatureProducts() {
     setWishlistId(rec.payload.data.map((item) => item._id));
   }
 
+
+  useEffect(() => {
+      if (data?.data?.data) {
+        setWishlistId(data.data.data.map(item => item._id));
+      }
+    }, [data])
   useEffect(() => {
     getAllWishlists()
   }, [])
@@ -71,7 +73,7 @@ export default function FeatureProducts() {
           {data?.data?.data.length > 0 ? (
             data?.data?.data.filter((item) => { return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search) }).map((product) => (
 
-              <div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/5  md:h-[365px] p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 dark:hover:shadow-3xl relative dark:bg-gray-800'>
+              <div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/5 h-[360px] p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 dark:hover:shadow-3xl relative dark:bg-gray-800'>
 
                 <Link to={`/productdetails/${product.id}/${product.category.name}`}>
                   <div>

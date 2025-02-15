@@ -7,7 +7,6 @@ import slider3 from "./../../assets/3.jpeg"
 
 export default function MainSlider() {
   var settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -20,22 +19,15 @@ export default function MainSlider() {
 
   return (
     <>
-    <div className='w-full overflow-hidden h-[250px] md:h-[400px] lg:h-[600px] xl:h-[700px] 2xl:h-full'>
-
-
-    
+    <div className='w-full overflow-hidden h-[200px] md:h-[400px] lg:h-[500px] xl:h-screen'>
 
 
 
-
-        <div className='w-full'>
+        <div className='w-full h-full overflow-hidden'>
         <Slider {...settings}>
-          <img loading="eager" src={slider1} className='w-full object-cover' alt="Slider 1" fetchpriority="high"/> 
-          <img loading="lazy" src={slider2} className='w-full object-cover' alt="Slider 2" /> 
-          <img loading="lazy" src={slider3} className='w-full object-cover' alt="Slider 3" /> 
-
-          
-
+          <img loading="eager" src={slider1} className='w-full ' alt="Slider 1" fetchpriority="high"/> 
+          <img loading="lazy" src={slider2} className='w-full ' alt="Slider 2" /> 
+          <img loading="lazy" src={slider3} className='w-full ' alt="Slider 3" /> 
         </Slider>
         </div>
     </div>
