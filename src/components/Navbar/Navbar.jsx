@@ -1,3 +1,5 @@
+
+
 import React, { useContext, useEffect, useMemo } from 'react'
 import Styles from './Navbar.module.css'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
@@ -12,15 +14,13 @@ import { CartContext } from '../Context/CartContext';
 
 export default function Navbar() {
 
-    const [isDarkMode, setIsDarkMode] = useState(() => false);
-
+    const [isDarkMode, setIsDarkMode] = useState(false);
     let navigate = useNavigate();
     let {Token , setToken} = useContext(TokenContext);
     let {numOfCartItems , GetCart } = useContext(CartContext);
 
 
 
-    
 
      function logout() {
 
@@ -58,7 +58,7 @@ export default function Navbar() {
     
  
 
-<nav className="bg-white border-gray-200 dark:bg-gray-900">
+<nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 max-h-[330px] min-h-[80px]  md:h-[100px] z-[99]">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 lg:px-10">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <i className="fa-solid fa-cart-shopping text-2xl h-6 dark:text-gray-300"></i>
@@ -69,20 +69,18 @@ export default function Navbar() {
         
 
 
-  <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+  <div className="flex items-center md:order-2 space-x-0 md:space-x-0 rtl:space-x-reverse">
 
 
-  <div className="flex items-center flex-row p-4 p-0  font-medium border border-gray-100 rounded-lg bg-gray-50 space-x-5 md:space-x-4 lg:space-x-8 rtl:space-x-reverse flex-row md:mt-0 border-0 bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+  <div className="flex items-center flex-row px-0 md:p-4 p-0  font-medium border border-gray-100 rounded-lg bg-gray-50 space-x-5 md:space-x-4 lg:space-x-8 rtl:space-x-reverse flex-row md:mt-0 border-0 bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 
+            
+  <DarkModeToggle
+    onChange={setIsDarkMode}
+    checked={isDarkMode}
+    size={35}
+/>         
                 
-                <div>
-                <DarkModeToggle
-                onChange={setIsDarkMode}
-                className='mt-2'
-                checked={isDarkMode}
-                size={35}
-                />
-                </div>
 
 
                 {Token ? 
@@ -97,7 +95,6 @@ export default function Navbar() {
                                                         <div className="relative w-7 h-7 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
                                                             <svg className="absolute w-9 h-9 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
                                                         </div>
-                                                        {/* <p className='text-black dark:text-white font-semibold px-3 hover:text-white dark:hover:text-black transition duration-500 '>{localStorage.getItem('userName')}</p> */}
                                     </button>
                                     <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700 dark:divide-gray-600 p-3" id="user-dropdown">
                                         <Link to="/userprofile" className="flex">
@@ -178,6 +175,11 @@ export default function Navbar() {
     </>
   )
 }
+
+
+
+
+
 
 
 

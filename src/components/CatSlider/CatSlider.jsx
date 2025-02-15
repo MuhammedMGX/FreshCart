@@ -39,12 +39,13 @@ export default function CatSlider() {
   
   var settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 20000,
     
   };
 
@@ -65,10 +66,8 @@ let {data} = useQuery({
   }, [])
 
 
-  // console.log(data?.data?.data);
-  
-  
-  
+
+
   
   return (
     <>
@@ -76,14 +75,16 @@ let {data} = useQuery({
     
 
 
-    <div className='container mx-auto p-10'>
+    <div className='container mx-auto p-10 h-[250px]'>
 
       <h1 className='font-extrabold text-xl pb-2 dark:text-gray-200'>Show Popular categories</h1>
     <Slider {...settings}>
 
           {data?.data?.data.map((cat) => <div key={cat._id} className='text-center my-3' >
-            <div  className='w-[90px] h-[90px] rounded-full mx-auto'>
-              <img src={cat.image} className='w-full h-full rounded-full hover:shadow-xl transition duration-500 dark:hover:shadow-xl dark:hover:shadow-gray-700' alt="" /> 
+            <div className='w-[90px] h-[90px] rounded-full mx-auto'>
+
+             <img loading="eager" src={cat.image} className='w-full h-full rounded-full hover:shadow-xl transition duration-500 dark:hover:shadow-xl dark:hover:shadow-gray-700' alt="" /> :
+
             </div>
             <p className='text-center font-bold py-2 dark:text-gray-200'>{cat.name}</p>
             </div>)}

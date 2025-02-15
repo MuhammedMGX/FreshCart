@@ -54,7 +54,7 @@ export default function FeatureProducts() {
   return (
     <>
       <div className='container py-10 mx-auto mb-20'>
-        <form className="my-5 px-10">
+        <form className="my-5 px-10 h-[70px]">
           <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
           <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -71,7 +71,7 @@ export default function FeatureProducts() {
           {data?.data?.data.length > 0 ? (
             data?.data?.data.filter((item) => { return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search) }).map((product) => (
 
-              <div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/5 p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 dark:hover:shadow-3xl relative dark:bg-gray-800'>
+              <div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/5  md:h-[365px] p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 dark:hover:shadow-3xl relative dark:bg-gray-800'>
 
                 <Link to={`/productdetails/${product.id}/${product.category.name}`}>
                   <div>
@@ -83,19 +83,17 @@ export default function FeatureProducts() {
                   </div>
 
                   <div className='flex justify-between items-center py-1'>
-                    <div  className='font-medium text-sm text-gray-500 dark:text-gray-300'><i className='fa fa-star text-black dark:text-gray-200 text-xs'></i> {product.ratingsAverage}</div>
 
-                    
+
+                    <div  className='font-medium text-sm text-gray-500 dark:text-gray-300 w-[50px]'><i className='fa fa-star text-black dark:text-gray-200 text-xs'></i> {product.ratingsAverage}</div>
 
                     {product.priceAfterDiscount ? 
-                      <div  className='relative flex justify-center font-bold text-sm dark:text-gray-200'>£{product.priceAfterDiscount} 
-                          <span className='absolute -bottom-4 text-xs line-through text-gray-500 dark:text-gray-300'>£{product.price}</span>
+                      <div  className='relative flex justify-center font-bold text-sm dark:text-gray-200 w-[40px]'>£{product.priceAfterDiscount} 
+                          <span className='absolute -bottom-4 text-xs line-through text-gray-500 dark:text-gray-300 w-[40px]'>£{product.price}</span>
                       </div>:
                 
-                      <div  className='relative flex justify-center font-bold text-sm dark:text-gray-200'>£{product.price}</div>
+                      <div  className='relative flex justify-center font-bold text-sm dark:text-gray-200 w-[40px]'>£{product.price}</div>
                       } 
-                      
-                    
 
                   </div>
 
