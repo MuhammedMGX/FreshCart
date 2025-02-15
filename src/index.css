@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    @apply bg-black text-white !important; 
+  }
+.dark .active {
+    @apply bg-white text-black !important; 
+  }
+
+
+
+
+  body {
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #111827;
+    --sb-size: 10px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+
+
+
+
+
+  
+  .dark body {
+    --sb-track-color: #111827;
+    --sb-thumb-color:rgb(186, 186, 186);
+    --sb-size: 10px;
+  }
+  
+  .dark   body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  .dark   body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+  
+  .dark  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    .dark    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+
