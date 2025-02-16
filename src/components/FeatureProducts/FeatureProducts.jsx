@@ -73,11 +73,11 @@ export default function FeatureProducts() {
           {data?.data?.data.length > 0 ? (
             data?.data?.data.filter((item) => { return search.toLowerCase() === "" ? item : item.title.toLowerCase().includes(search) }).map((product) => (
 
-              <div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/5 h-[360px] p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 dark:hover:shadow-3xl relative dark:bg-gray-800'>
+              <div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/6 min:h-[360px] p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 dark:hover:shadow-3xl relative dark:bg-gray-800'>
 
                 <Link to={`/productdetails/${product.id}/${product.category.name}`}>
                   <div>
-                      <img loading="lazy" fetchpriority="low" src={product.imageCover} className='w-full h-full rounded-xl overflow-hidden' alt="" />
+                      <img loading="lazy" src={product.imageCover} className='w-full h-full rounded-xl overflow-hidden' alt="" />
                   </div>
 
                   <div className='flex justify-between pt-1'>

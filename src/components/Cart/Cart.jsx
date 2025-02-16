@@ -81,7 +81,7 @@ useEffect(() => {
 </Helmet>
 
 
-{isLoading ? <Loader/> : <div className="relative container mx-auto overflow-x-auto sm:rounded-lg my-10 p-10">
+{isLoading ? <Loader/> : <div className="relative container mx-auto overflow-x-auto sm:rounded-lg my-10 p-10 h-screen">
     <div className="pb-4 bg-white dark:bg-gray-900 flex justify-between px-20">
         <label htmlFor="table-search" className="sr-only">Search</label>
         <div className="relative mt-1">
