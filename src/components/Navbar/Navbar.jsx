@@ -60,8 +60,8 @@ export default function Navbar() {
 <nav className="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 left-0 right-0 h-[80px] max-h-[300px] md:h-[100px] z-[99]">
   <div className=" flex flex-wrap items-center justify-between mx-auto p-4 lg:px-10 h-full">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <i className="fa-solid fa-cart-shopping text-2xl h-6 dark:text-gray-300 mt-1"></i>
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white mt-1">FreshCart</span>
+            <i fetchpriority="high" className="fa-solid fa-cart-shopping text-2xl h-6 dark:text-gray-300 mt-1"></i>
+            <span fetchpriority="high" className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white mt-1">FreshCart</span>
         </Link>
 
 

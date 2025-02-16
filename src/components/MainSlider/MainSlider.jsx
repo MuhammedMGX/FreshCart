@@ -35,13 +35,12 @@ export default function MainSlider() {
 
     <div className='w-full overflow-hidden h-[200px] md:h-[400px] lg:h-[500px] xl:h-screen'>
         <Slider {...settings}>
-          <img loading="eager" src={slider1} className='w-full ' alt="Slider 1" fetchpriority="high"/> 
+          <img loading="eager" fetchpriority="high" src={slider1} className='w-full ' alt="Slider 1"/> 
           <img loading="lazy" src={slider2} className='w-full ' alt="Slider 2" /> 
-          <img loading="lazy" src={slider3} className='w-full ' alt="Slider 3" /> 
+          <img loading="lazy" src={slider3} className='w-full ' alt="Slider 3" />
         </Slider>
     </div>
     </>
   )
 }
-
 

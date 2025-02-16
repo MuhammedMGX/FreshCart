@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Styles from './UserProfile.module.css'
 import { Link, Outlet } from 'react-router-dom'
 import axios from 'axios';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function UserProfile() {
 
@@ -30,6 +30,8 @@ export default function UserProfile() {
 
 
   return (
+        <HelmetProvider>
+    
     <>
 
 
@@ -150,5 +152,7 @@ export default function UserProfile() {
 
 
     </>
+        </HelmetProvider>
+    
   )
 }

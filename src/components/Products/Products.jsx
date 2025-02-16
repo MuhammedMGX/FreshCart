@@ -1,11 +1,12 @@
 import React from 'react'
 import FeatureProducts from '../FeatureProducts/FeatureProducts'
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 
 export default function Products() {
   return (
+<HelmetProvider>
     <>
 
 
@@ -17,5 +18,6 @@ export default function Products() {
    
     <FeatureProducts/>
     </>
+</HelmetProvider>
   )
 }

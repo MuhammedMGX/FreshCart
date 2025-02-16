@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import { getBrands } from '../../Redux/BrandSlice';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function Brands() {
 
@@ -30,6 +30,8 @@ useEffect(() => {
 
 
   return (
+        <HelmetProvider>
+    
     <>
     
     <Helmet>
@@ -68,5 +70,7 @@ useEffect(() => {
         
     
     </>
+        </HelmetProvider>
+    
   )
 }

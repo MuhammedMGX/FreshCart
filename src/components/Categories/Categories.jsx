@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCategories } from '../../Redux/Categories';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function Categories() {
   const [isLoading, setIsLoading] = useState(true)
@@ -30,6 +30,8 @@ useEffect(() => {
 
 
   return (
+        <HelmetProvider>
+    
     <>
    
     
@@ -73,5 +75,7 @@ useEffect(() => {
     
     
     </>
+        </HelmetProvider>
+    
   )
 }

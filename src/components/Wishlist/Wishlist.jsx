@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { getWishlist , DelWishlist } from '../../Redux/WishlistSlice'
 import Loader from '../Loader/Loader'
 import { CartContext } from '../Context/CartContext';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function Wishlist() {
 
@@ -43,6 +43,8 @@ useEffect(() => {
 
 
   return (
+        <HelmetProvider>
+    
     <>
     
     
@@ -128,5 +130,7 @@ useEffect(() => {
     
     
     </>
+        </HelmetProvider>
+    
   )
 }

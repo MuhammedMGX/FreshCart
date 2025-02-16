@@ -4,7 +4,7 @@ import { CartContext } from '../Context/CartContext'
 import Loader from '../Loader/Loader'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 export default function Cart() {
@@ -72,6 +72,8 @@ useEffect(() => {
 
 
   return (
+        <HelmetProvider>
+    
     <>
     
 <Helmet>
@@ -199,22 +201,6 @@ useEffect(() => {
 
 
 
-            {/* <div className='w-full flex justify-end relative mb-10 px-10'>
-                <button id="dropdownDefaultButton" onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="bg-transparent text-gray-600 border-2 border-gray-400 px-4 py-2 rounded-full hover:bg-black hover:border-black hover:text-white transition duration-500 text-sm font-bold mt-3" type="button">Checkout</button>
-                  {isDropdownOpen && (
-                  <div id="dropdown" className="z-10 bg-gray-100 divide-y divide-gray-200 rounded-lg shadow-sm w-44 dark:bg-gray-700 absolute top-3 right-52">
-                      <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 " aria-labelledby="dropdownDefaultButton">
-                        <li>
-                                      <Link to="/checkout" state={{type:"Online payment"}} className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Online Payment</Link>
-                                    </li>
-                                    <li>
-                                      <Link to="/checkout" state={{type:"Cash on Delivery"}} className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Cash</Link>
-                                    </li>
-                      </ul>
-                  </div>
-                  )}
-            </div> */}
-{/* <Link to="/checkout" className='bg-blue-700 hover:bg-blue-800 text-white hover:text-gray-100 px-4 py-3 rounded-xl'>Chekout</Link> */}
 
 </div>}
 
@@ -222,5 +208,7 @@ useEffect(() => {
 
     
     </>
+        </HelmetProvider>
+    
   )
 }
