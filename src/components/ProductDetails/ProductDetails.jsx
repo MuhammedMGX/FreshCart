@@ -149,7 +149,7 @@ export default function ProductDetails() {
       {inLoading ? <Loader/> : null}
 
 
-      <div className='flex justify-center px-5'>
+      <div className='flex flex-col md:flex-row justify-center px-5'>
 
         <div className="w-full md:w-1/2 relative rounded-xl">
         <Slider {...settings}>
@@ -253,7 +253,7 @@ export default function ProductDetails() {
     <div className='container py-10 mx-auto'>
       
         <h1 className='text-center mt-20 mb-7 font-extrabold text-xl dark:text-gray-200'>Related Products</h1>
-         <div className='flex flex-wrap justify-center gap-8'>
+         <div className='flex flex-wrap justify-center md:gap-8 '>
 
         
 

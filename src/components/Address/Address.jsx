@@ -152,8 +152,8 @@ export default function Address() {
 
            
 
-                  { isloading ? <button type="submit" className="bg-transparent text-gray-600 border-2 border-gray-400 px-4 py-2 rounded-full hover:bg-black hover:border-black hover:text-white  dark:bg-transparent dark:text-gray-100 dark:border-gray-300 dark:hover:bg-white dark:hover:text-black dark:hover:border-black transition duration-500 text-sm font-bold"><i className='fa fa-spinner fa-spin dark:text-black'></i></button>
-                  : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="bg-transparent text-gray-600 border-2 border-gray-400 px-4 py-2 rounded-full hover:bg-black hover:border-black hover:text-white  dark:bg-transparent dark:text-gray-100 dark:border-gray-300 dark:hover:bg-white dark:hover:text-black dark:hover:border-black transition duration-500 text-sm font-bold">Verify</button>}
+                  { isloading ? <button type="submit" className="bg-black text-gray-200 border-2 border-gray-400 px-3 py-1 rounded-full hover:bg-black hover:border-black hover:text-white dark:bg-white  dark:text-black dark:border-gray-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-black transition duration-500 text-sm font-bold"><i className='fa fa-spinner fa-spin dark:text-black'></i></button>
+                  : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="bg-black text-gray-200 border-2 border-gray-400 px-3 py-1 rounded-full hover:bg-black hover:border-black hover:text-white dark:bg-white  dark:text-black dark:border-gray-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-black transition duration-500 text-sm font-bold">Verify</button>}
                   
                   
             

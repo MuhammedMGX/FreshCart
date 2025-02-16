@@ -67,7 +67,7 @@ useEffect(() => {
   {wishlist.length > 0 ? (
       wishlist.map((product) => (
        
-<div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/5 p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 relative dark:bg-gray-800'>
+<div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/6 p-4 product rounded-xl overflow-hidden transition duration-500 shadow hover:shadow-2xl  dark:shadow-gray-800 relative dark:bg-gray-800'>
 
                 <Link to={`/productdetails/${product.id}/${product.category.name}`}>
                   <div>

@@ -114,7 +114,7 @@ useEffect(() => {
               
               <th scope="col" colSpan="1" className="px-6 py-3 flex justify-between items-center">
                 <h3 className='font-extrabold text-black dark:text-gray-200'>Address {address.indexOf(item)+1}</h3>
-                <Link onClick={()=>DelAddrees(item._id)} type="button" className="bg-black text-gray-200 border-2 border-gray-400 px-3 py-1 rounded-full hover:bg-black hover:border-black hover:text-white dark:bg-white  dark:text-black dark:border-gray-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-black transition duration-500 text-sm font-bold">Delete Address</Link>
+                <Link onClick={()=>DelAddrees(item._id)} type="button" className="bg-black text-gray-200 border-2 border-gray-400 px-3 py-1 rounded-full hover:bg-black hover:border-black hover:text-white dark:bg-white  dark:text-black dark:border-gray-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-black transition duration-500 text-[8px] md:text-sm font-bold">Delete Address</Link>
               </th>
             </tr>
           </thead>

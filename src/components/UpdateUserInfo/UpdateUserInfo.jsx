@@ -153,8 +153,8 @@ export default function UpdateUserInfo() {
 
            
 
-                  { isloading ? <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i className='fa fa-spinner fa-spin'></i></button>
-                  : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Verify</button>}
+                  { isloading ? <button type="submit" className="bg-black text-gray-200 border-2 border-gray-400 px-3 py-1 rounded-full hover:bg-black hover:border-black hover:text-white dark:bg-white  dark:text-black dark:border-gray-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-black transition duration-500 text-sm font-bold"><i className='fa fa-spinner fa-spin'></i></button>
+                  : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="bg-black text-gray-200 border-2 border-gray-400 px-3 py-1 rounded-full hover:bg-black hover:border-black hover:text-white dark:bg-white  dark:text-black dark:border-gray-300 dark:hover:bg-black dark:hover:text-white dark:hover:border-black transition duration-500 text-sm font-bold">Verify</button>}
                   
                   
             

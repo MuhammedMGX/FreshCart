@@ -68,7 +68,7 @@ export default function ChangePassword() {
           onSubmit={formik.handleSubmit}
           className=" md:w-1/2 mx-auto mt-20 p-20 shadow-2xl rounded-3xl"
         >
-          <h1 className="text-xl font-semibold mb-5">
+          <h1 className="text-xl font-semibold mb-5 dark:text-gray-200">
             Change your account password :
           </h1>
 
