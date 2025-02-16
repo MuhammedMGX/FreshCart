@@ -6,7 +6,6 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {TokenContext} from '../Context/TokenContext';
-import { CartContext } from '../Context/CartContext';
 
 
 
@@ -20,7 +19,7 @@ export default function Login() {
 
 
 
-    let {Token , setToken , userInfo , setUserInfo} = useContext(TokenContext);
+    let { setToken } = useContext(TokenContext);
     
 
     const formik = useFormik({
@@ -50,7 +49,6 @@ export default function Login() {
         return await axios
             .post("https://ecommerce.routemisr.com/api/v1/auth/signin" , values)
             .then((data) => {
-                console.log(data);
                 localStorage.setItem('userName' , data.data.user.name);
                 localStorage.setItem('userEmail' , data.data.user.email);
                 localStorage.setItem('userRole' , data.data.user.role);
@@ -69,7 +67,6 @@ export default function Login() {
                 })
                 .catch((error) => {
                     setisloading(false)
-                    console.log(error.response.data.message);
                     
                     seterrmessage(error.response.data.message)
                     setmessage(null)
@@ -88,21 +85,21 @@ export default function Login() {
 
             <form className=" md:w-1/2 mx-auto mt-20 p-20 shadow-2xl rounded-3xl"  onSubmit={formik.handleSubmit}>
 
-                <h1 className='text-3xl font-semibold mb-5 dark:text-gray-100'>Login Now :</h1>
+                <h1 className='text-3xl font-semibold mb-5 dark:text-gray-100' fetchpriority="high" >Login Now :</h1>
 
 
-                { message ? 
+                { message ?
                 <div className="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
                 <span className="font-medium">{message}</span>
                 </div>
-                 : null}
+                 :null}
 
 
-                { errmessage ? 
+                { errmessage ?
                 <div className="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
                 <span className="font-medium">{errmessage}</span>
                 </div>
-                 : null}
+                 :null}
 
 
 
@@ -146,7 +143,7 @@ export default function Login() {
                 : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="bg-black text-white border-2 px-4 py-2 rounded-full hover:bg-white hover:border-black hover:text-black  dark:bg-transparent dark:text-gray-100 dark:border-gray-300 dark:hover:bg-white dark:hover:text-black dark:hover:border-black transition duration-500 text-sm font-bold">Login</button>}
             
 
-                <Link to="/forgetpassword" className='mt-2 hover:text-blue-800 font-normal dark:text-gray-100'>forget your password ?</Link>
+                <Link to="/forgetpassword" className='mt-2 text-xs sm:text-sm hover:text-blue-800 font-normal dark:text-gray-100'>forget your password ?</Link>
             </div>
 
          

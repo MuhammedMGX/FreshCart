@@ -6,7 +6,7 @@ button:disabled {
 
 @font-face {
     font-family: 'EncodeSansExpanded';
-    src: url('./../fonts/EncodeSansExpanded-Bold.ttf');
+    src: url('./../fonts/EncodeSansExpanded-Bold.woff2') format('woff2');
     font-family: 'Encode Sans Expanded';
     font-style: normal;
     font-weight: 300;

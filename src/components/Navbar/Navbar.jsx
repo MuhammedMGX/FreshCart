@@ -116,14 +116,14 @@ export default function Navbar() {
                                 </div>
                     </div>
                     ) : (
-                        <>
+                        <div className='md:flex md:gap-x-5'>
                             <div>
                                 <Link to="login" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 focus:text-blue-700 cursor-default font-semibold transition">Login</Link>
                             </div>
                             <div>
                                 <Link to="register" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 focus:text-blue-700 cursor-default font-semibold transition">Register</Link>
                             </div>
-                        </>
+                        </div>
                     )}
 
                 
@@ -143,7 +143,7 @@ export default function Navbar() {
 
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 mt-1" id="navbar-cta">
     <ul className="flex flex-col items-center text-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-    {Token ?<ul className="w-full flex flex-col p-4 md:p-0 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <ul className="w-full flex flex-col p-4 md:p-0 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li className='py-2 md:py-0'>
                 <NavLink to="/" className="bg-transparent text-gray-600 dark:text-gray-100 px-3 py-2 rounded-full hover:bg-black hover:text-white transition duration-500 text-sm font-bold dark:hover:bg-white dark:hover:text-black">Home</NavLink>
             </li>
@@ -159,7 +159,7 @@ export default function Navbar() {
             <li className='py-2 md:py-0'>
                 <NavLink to="wishlist" className="bg-transparent text-gray-600 dark:text-gray-100 px-3 py-2 rounded-full hover:bg-black hover:text-white transition duration-500 text-sm font-bold dark:hover:bg-white dark:hover:text-black">Wishlist</NavLink>
             </li>
-            </ul> : null}
+            </ul> 
     </ul>
   </div>
   </div>

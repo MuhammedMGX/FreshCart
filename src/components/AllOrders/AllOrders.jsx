@@ -22,13 +22,11 @@ export default function AllOrders() {
       .get(
         `https://ecommerce.routemisr.com/api/v1/orders/user/${localStorage.getItem("cartOwner")}`)
       .then((response) => {
-        console.log(response.data);
         setUserOrders(response.data);
         
         return response;
       })
       .catch((err) => {
-        // console.log(err);
         return err;
       });
   }
@@ -43,6 +41,9 @@ export default function AllOrders() {
   return (
     <>
       <div className="relative container mx-auto overflow-x-auto sm:rounded-lg mb-10">
+
+
+
 
 
       {userOrders.map((item)=>  <table key={item._id} className=" rounded-lg overflow-hidden w-[90%] mx-auto text-sm text-left rtl:text-right shadow-xl text-gray-500 dark:text-gray-400 my-20">
@@ -111,12 +112,13 @@ export default function AllOrders() {
             </tr>
 
           </tbody>
-          </table> )}
+          </table> )} 
         
 
 
 
-      </div>
+      </div> 
+
     </>
   );
 }
