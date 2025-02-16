@@ -71,7 +71,7 @@ export default function Navbar() {
   <div className="flex items-center md:order-2 space-x-0 md:space-x-0 rtl:space-x-reverse">
 
 
-  <div className="flex items-center bg-transparent flex-row px-0 md:p-4 p-0  font-medium border border-gray-100 rounded-lg bg-gray-50 space-x-5 md:space-x-5 lg:space-x-8 rtl:space-x-reverse flex-row md:mt-0 border-0 bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+  <div className="flex items-center bg-transparent flex-row px-0 md:p-4 p-0  font-medium border border-gray-100 rounded-lg bg-gray-50 space-x-5 md:space-x-5 lg:space-x-8 rtl:space-x-reverse flex-row md:mt-0 border-0 ">
                 
   
                 <div onClick={()=>setIsDarkMode(!isDarkMode)} className='cursor-pointer'>{isDarkMode? <i className="fa-solid fa-sun text-xl text-white mt-2"></i> : <i className="fa-solid fa-moon text-xl mt-2"></i> }</div>

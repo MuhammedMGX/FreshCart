@@ -13,7 +13,6 @@ export default function AllOrders() {
   const [userOrders, setUserOrders] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  console.log(localStorage.getItem("cartOwner"));
 
 
 
