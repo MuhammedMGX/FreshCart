@@ -55,13 +55,13 @@ async function payNow(values) {
     <>
     
     
-    <div className="container mx-auto my-10">
+    <div className="container mx-auto my-10 h-screen">
 
             
 
             <form className="max-w-sm mx-auto"  onSubmit={formik.handleSubmit}>
 
-                <h1 className='text-3xl font-semibold mb-5'>{paymentType}</h1>
+                <h1 className='text-3xl font-semibold mb-5 dark:text-gray-200'>{paymentType}</h1>
 
 
 

@@ -5,7 +5,6 @@ export let TokenContext = createContext()
 export default function TokenContextProider(props) {
 
     const [Token, setToken] = useState(null)
-    console.log(Token);
     
     useEffect(() => {
       if(localStorage.getItem('userToken') ){
