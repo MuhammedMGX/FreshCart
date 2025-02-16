@@ -83,7 +83,7 @@ let {data} = useQuery({
           {data?.data?.data.map((cat) => <div key={cat._id} className='text-center my-3' >
             <div className='w-[90px] h-[90px] rounded-full mx-auto'>
 
-             <img src={cat.image} className='w-full h-full rounded-full hover:shadow-xl transition duration-500 dark:hover:shadow-xl dark:hover:shadow-gray-700' alt="" /> :
+             <img loading="lazy" src={cat.image} className='w-full h-full rounded-full hover:shadow-xl transition duration-500 dark:hover:shadow-xl dark:hover:shadow-gray-700' alt="" /> :
 
             </div>
             <p className='text-center font-bold py-2 dark:text-gray-200'>{cat.name}</p>

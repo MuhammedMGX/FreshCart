@@ -77,7 +77,7 @@ export default function FeatureProducts() {
 
                 <Link to={`/productdetails/${product.id}/${product.category.name}`}>
                   <div>
-                      <img src={product.imageCover} className='w-full h-full rounded-xl overflow-hidden' alt="" />
+                      <img loading="lazy" fetchpriority="low" src={product.imageCover} className='w-full h-full rounded-xl overflow-hidden' alt="" />
                   </div>
 
                   <div className='flex justify-between pt-1'>

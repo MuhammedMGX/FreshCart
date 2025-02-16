@@ -80,16 +80,16 @@ export default function Navbar() {
 
                 {Token ? 
                 <div>
-                    <Link to="cart" className="block text-gray-900 mt-2 rounded-sm hover:bg-gray-100 md:hover:bg-transparent p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 focus:text-blue-900 transition"><i className="fa-solid fa-cart-shopping relative text-xl dark:text-gray-300">{numOfCartItems != 0 ? <div className="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-black text-white rounded-full -top-5 -end-5 dark:bg-white dark:text-black">{numOfCartItems}</div> : null}</i></Link>
+                    <Link to="cart" className="block text-gray-900 mt-2 rounded-sm hover:bg-gray-100 md:hover:bg-transparent p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 focus:text-blue-900 transition"><i className="fa-solid fa-cart-shopping relative text-xl dark:text-white">{numOfCartItems != 0 ? <div className="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-black text-white rounded-full -top-5 -end-5 dark:bg-white dark:text-black">{numOfCartItems}</div> : null}</i></Link>
                 </div>:null}
 
                 {Token ? (
                     <div className="flex items-center">
                                 <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                                    <button type="button" className="flex bg-white hover:bg-black dark:bg-gray-900 dark:hover:bg-white transition duration-500 items-center text-sm rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-                                                        <div className="relative w-7 h-7 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                                                            <svg className="absolute w-9 h-9 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
-                                                        </div>
+                                    <button type="button" className=" dark:bg-gray-900 rounded-full" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                                            
+                                        <i className="fa-solid fa-user text-xl mt-2 text-black dark:text-white"></i> 
+
                                     </button>
                                     <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700 dark:divide-gray-600 p-3" id="user-dropdown">
                                         <Link to="/userprofile" className="flex">
@@ -132,11 +132,9 @@ export default function Navbar() {
 
 
 
-      <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+      <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center mt-1 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
-        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
+            <i className="fa-solid fa-bars text-2xl text-black dark:text-white ms-1"></i>
     </button>
   </div>
 
