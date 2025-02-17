@@ -55,7 +55,6 @@ export default function Address() {
             token : localStorage.getItem("userToken")
         }})
         .then((response)=>{
-          console.log(response);
           
           setisloading(false)
           Navigate('/UserProfile')

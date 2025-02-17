@@ -60,7 +60,6 @@ export default function ResetPassword() {
         })
         .catch((error) => {
             setisloading(false)
-            console.log(error.response.data.message);
             
             
         })

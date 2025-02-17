@@ -54,7 +54,6 @@ export default function UpdateUserInfo() {
              token : localStorage.getItem("userToken")
          }})
          .then((response)=>{
-           console.log(response);
                 localStorage.setItem('userName' , data.data.user.name);
                 localStorage.setItem('userEmail' , data.data.user.email);
                 localStorage.setItem('userRole' , data.data.user.role);

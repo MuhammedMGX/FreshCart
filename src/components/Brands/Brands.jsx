@@ -14,7 +14,6 @@ export default function Brands() {
 
 let dispatch = useDispatch()
 let {brands} = useSelector((state)=> state.brandReducer)
-console.log(brands);
 
 
 async function getAllBrands() {

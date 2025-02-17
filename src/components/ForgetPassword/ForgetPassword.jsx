@@ -53,7 +53,6 @@ const formik = useFormik({
               })
               .catch((error) => {
                   setisloading(false)
-                  console.log(error.response.data.message);
                   
                   
               })

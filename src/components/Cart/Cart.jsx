@@ -33,7 +33,6 @@ async function GetAllCart() {
 
 async function RemoveCartItem(productId) {
   let response = await RemoveItem(productId)
-  // console.log(response.data.data.products);
   setCartItems(response.data.data.products)
 
   
@@ -43,7 +42,6 @@ async function RemoveCartItem(productId) {
 
 async function UpdateCartItem(productId , count) {
   let response = await updateItem(productId , count)
-  // console.log(response.data.data.products);
   setCartItems(response.data.data.products)
 
   

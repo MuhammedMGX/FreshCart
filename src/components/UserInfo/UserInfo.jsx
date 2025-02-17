@@ -23,7 +23,6 @@ const [address, setAddress] = useState([])
       return response;
     })
     .catch((err) => {
-      // console.log(err);
       return err;
     });
 }
@@ -37,12 +36,10 @@ async function DelAddrees(addressId) {
       },
     })
     .then((response) => {
-      console.log(response);
       GetAddrees()
       return response;
     })
     .catch((err) => {
-      // console.log(err);
       return err;
     });
 }

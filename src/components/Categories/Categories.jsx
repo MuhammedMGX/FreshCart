@@ -14,7 +14,6 @@ export default function Categories() {
 
 let dispatch = useDispatch()
 let {categories} = useSelector((state)=> state.categoriesReducer)
-// console.log(categories);
 
 
 async function getAllCategories() {
