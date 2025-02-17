@@ -44,7 +44,7 @@ useEffect(() => {
 
 
    
-        <div className='container py-10 mx-auto h-screen'>
+        <div className='container py-10 mx-auto md:h-screen'>
     
     {isLoading ? <Loader/> : <div className='flex flex-wrap justify-center'>
     

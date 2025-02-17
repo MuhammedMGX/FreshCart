@@ -59,7 +59,7 @@ async function payNow(values) {
 
             
 
-            <form className="max-w-sm mx-auto"  onSubmit={formik.handleSubmit}>
+            <form className="w-full md:w-1/2 mx-auto mt-20 p-20 shadow-2xl rounded-3xl"  onSubmit={formik.handleSubmit}>
 
                 <h1 className='text-3xl font-semibold mb-5 dark:text-gray-200'>{paymentType}</h1>
 
@@ -103,11 +103,8 @@ async function payNow(values) {
             
 
      
-            <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition">Paynow</button>
-            {/* 
-            { isloading ? <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i className='fa fa-spinner fa-spin'></i></button>
-            : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>}
-             */}
+            <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="bg-black text-white border-2 px-4 py-2 rounded-full hover:bg-white hover:border-black hover:text-black  dark:bg-transparent dark:text-gray-100 dark:border-gray-300 dark:hover:bg-white dark:hover:text-black dark:hover:border-black transition duration-500 md:text-sm font-bold">Paynow</button>
+            
             
             </form>
 

@@ -60,7 +60,7 @@ useEffect(() => {
 
                       
 
-{isLoading ? <Loader/> : <div className='flex flex-wrap justify-center gap-8 '>
+{isLoading ? <Loader/> : <div className='flex flex-wrap justify-center md:gap-8 '>
 
 
 

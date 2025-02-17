@@ -52,7 +52,7 @@ export default function UserProfile() {
 
       <div className="grid md:grid-rows-4 md:grid-cols-4">
 
-        <aside id="default-sidebar" className="col-span-1 row-span-4  top-0 left-0 z-40 w-64 h-full absolute transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+        <aside id="default-sidebar" className="col-span-1 row-span-4 top-0 left-0 z-40 w-64 h-full absolute md:relative transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
           
           <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 flex flex-col justify-between">
             <ul className="space-y-2 font-medium px-2 flex flex-col items-start">
@@ -116,15 +116,15 @@ export default function UserProfile() {
 
 
 
-          <div className="col-span-1 md:col-span-3 md:row-span-1 container ps-10 md:px-28 w-full flex flex-row items-center my-8">
+          <div className="col-span-4 md:col-span-3 md:row-span-1 container flex flex-row justify-center items-center my-8">
 
                       
 
-                <div className="relative w-10 h-10 md:w-36 md:h-36 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 m-5">
-                    <svg className="absolute md:w-40 md:h-40 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
+                <div className="relative h-full overflow-hidden flex justify-center items-center">
+                    <svg className="w-[90px] h-[90px] md:w-[100px] md:h-[100px] text-gray-400 bg-gray-100 dark:bg-gray-600 rounded-full" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
                 </div>
 
-                <div>
+                <div className=' ms-5'>
                   <h1 className='text-4xl font-bold dark:text-gray-200'>{localStorage.getItem('userName')}</h1>
                   <p className='text-black font-semibold ps-1 dark:text-gray-200'>{localStorage.getItem('userRole')}</p>
                 </div>
@@ -139,7 +139,7 @@ export default function UserProfile() {
 
 
 
-          <div className="col-span-1 md:col-span-3 md:row-span-4 container mx-auto w-full flex flex-col items-center">
+          <div className="col-span-4 md:col-span-3 md:row-span-4 container mx-auto  flex flex-col items-center">
 
             <Outlet/>
 
