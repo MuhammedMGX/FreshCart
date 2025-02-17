@@ -50,7 +50,7 @@ useEffect(() => {
       {brands.map((product) => (
       
          
-          <div key={product._id} className='sm:w-1/2 md:w-1/4 lg:w-1/6 px-3 py-1 product '>
+          <div key={product._id} className='w-1/2 md:w-1/4 lg:w-1/6 px-3 py-1 product '>
     
             <Link to={`/brandsDetails/${product._id}`}>
               <img src={product.image} className='w-full' alt="" />

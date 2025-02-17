@@ -81,16 +81,14 @@ useEffect(() => {
 </Helmet>
 
 
-{isLoading ? <Loader/> : <div className="relative container mx-auto sm:rounded-lg my-2 p-10">
+{isLoading ? <Loader/> : <div className="relative container mx-auto sm:rounded-lg my-2 p-10 ">
                                 <div className="pb-4 bg-white dark:bg-gray-900 flex justify-between">
                                     <button onClick={()=>ClearCartItem()} className='bg-transparent text-red-500 border-2 border-red-400 px-3 py-1 rounded-full hover:bg-red-500 hover:border-red-500 hover:text-white transition duration-500 text-sm font-bold mt-3'>Clear Cart</button>
                                 </div>
 
 
 
-
-
-                              <div className="flex flex-wrap justify-center md:gap-2 rounded-xl text-sm text-gray-500 dark:text-gray-400 shadow-xl">
+                              {cartItems.length > 0 ?  <div className="flex flex-wrap justify-center md:gap-2 rounded-xl text-sm text-gray-500 dark:text-gray-400 shadow-xl">
                                     
 
 
@@ -201,7 +199,9 @@ useEffect(() => {
 
                                             </div>
                                   
-                            </div>
+                            </div> :null}
+
+                              
                             
 
 
