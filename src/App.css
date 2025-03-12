@@ -32,3 +32,15 @@ body {
 
 }
 
+
+
+.navCollapse button:focus {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navCollapse button:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+

@@ -3,7 +3,6 @@ import { useState } from 'react'
 import './App.css'
 import image from "./assets/wifi.png"
 import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
 import Layout from './components/Layout/Layout'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Brands from './components/Brands/Brands'
